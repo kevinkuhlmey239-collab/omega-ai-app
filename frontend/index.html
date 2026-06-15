@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMEGA AI</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <header>
+    <div class="logo">Ω OMEGA AI</div>
+    <nav>
+      <a href="#features">Funktionen</a>
+      <a href="#pricing">Preise</a>
+      <a href="#login">Login</a>
+      <a class="btn small" href="#app">App öffnen</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <span class="badge">KI-Plattform für moderne Unternehmen</span>
+      <h1>Automatisiere Chat, Wissen, Dokumente und Agenten mit OMEGA AI.</h1>
+      <p>Eine SaaS-Plattform mit KI-Chat, Dokumentenanalyse, Agenten, Dashboard und Stripe-Abos.</p>
+      <div class="actions">
+        <a href="#pricing" class="btn">Jetzt starten</a>
+        <a href="#login" class="btn ghost">Login</a>
+      </div>
+    </div>
+    <div class="mockup">
+      <h3>Dashboard</h3>
+      <div class="grid">
+        <div><b>128</b><span>Chats</span></div>
+        <div><b>342</b><span>Dokumente</span></div>
+        <div><b>15</b><span>Agenten</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <h2>Funktionen</h2>
+    <div class="cards">
+      <div class="card"><h3>KI-Chat</h3><p>Chatte mit OMEGA AI und verbinde später dein echtes KI-Modell.</p></div>
+      <div class="card"><h3>Dokumente</h3><p>Bereich für spätere Dokumentenanalyse und RAG.</p></div>
+      <div class="card"><h3>Agenten</h3><p>Automatisierungen und Aufgabenverwaltung vorbereitet.</p></div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Preise</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Starter</h3>
+        <p class="price">19 € <span>/ Monat</span></p>
+        <ul><li>KI-Chat</li><li>Dokumente</li><li>Mobile Web-App</li></ul>
+        <a class="btn" href="https://buy.stripe.com/28E14m36h4mUcbSbfo2Ry00">Starter abonnieren</a>
+      </div>
+      <div class="card highlight">
+        <h3>Pro</h3>
+        <p class="price">49 € <span>/ Monat</span></p>
+        <ul><li>Alles aus Starter</li><li>Agenten</li><li>Automatisierungen</li></ul>
+        <a class="btn" href="https://buy.stripe.com/7sYbJ0ayJg5CdfW0AK2Ry01">Pro abonnieren</a>
+      </div>
+      <div class="card">
+        <h3>Business</h3>
+        <p class="price">199 € <span>/ Monat</span></p>
+        <ul><li>Teams</li><li>Admin</li><li>Audit & API</li></ul>
+        <a class="btn" href="https://buy.stripe.com/5kQaEW6it3iQ8ZG4R02Ry02">Business abonnieren</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="login" class="login-section">
+    <div>
+      <h2>Login / Registrierung</h2>
+      <p>Registriere dich und nutze das Dashboard. Backend-URL in den Einstellungen eintragen.</p>
+    </div>
+    <div class="login-box">
+      <input id="email" type="email" placeholder="E-Mail" />
+      <input id="password" type="password" placeholder="Passwort" />
+      <button onclick="registerUser()">Registrieren</button>
+      <button onclick="loginUser()">Einloggen</button>
+    </div>
+  </section>
+
+  <section id="app" class="app">
+    <aside>
+      <h3>OMEGA</h3>
+      <button onclick="showTab('dashboard')">Dashboard</button>
+      <button onclick="showTab('chat')">Chat</button>
+      <button onclick="showTab('docs')">Dokumente</button>
+      <button onclick="showTab('settings')">Einstellungen</button>
+    </aside>
+    <main class="workspace">
+      <div id="dashboard" class="tab active">
+        <h2>Dashboard</h2>
+        <p>User: <span id="userEmail">Nicht eingeloggt</span></p>
+        <p>Status: <span id="status">Offline</span></p>
+      </div>
+      <div id="chat" class="tab">
+        <h2>KI-Chat</h2>
+        <div id="messages" class="messages"><p><b>OMEGA:</b> Hallo, ich bin bereit.</p></div>
+        <div class="chatbar">
+          <input id="chatInput" placeholder="Nachricht..." />
+          <button onclick="sendChat()">Senden</button>
+        </div>
+      </div>
+      <div id="docs" class="tab">
+        <h2>Dokumente</h2>
+        <input type="file" />
+        <p>Dokumentenanalyse wird später mit Backend verbunden.</p>
+      </div>
+      <div id="settings" class="tab">
+        <h2>Einstellungen</h2>
+        <label>Backend API URL</label>
+        <input id="apiUrl" value="http://localhost:8000" />
+        <button onclick="saveSettings()">Speichern</button>
+      </div>
+    </main>
+  </section>
+
+  <footer>© 2026 OMEGA AI · info@omega-ai.app</footer>
+  <script src="app.js"></script>
+</body>
+</html>

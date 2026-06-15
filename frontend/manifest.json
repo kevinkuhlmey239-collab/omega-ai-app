@@ -1,0 +1,8 @@
+{
+  "name": "OMEGA AI",
+  "short_name": "OMEGA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070b16",
+  "theme_color": "#6c4dff"
+}
